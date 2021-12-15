@@ -1,0 +1,36 @@
+h3 {
+  font-size: 30px;
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+}
+.frog-icon {
+  color: #0b5ed7;
+}
+.mainTemerature {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.weatherText {
+  font-size: 32px;
+}
+.unit {
+  position: relative;
+  top: -15px;
+}
+
+.forecast {
+  text-align: center;
+  font-size: 30px;
+}
+#description {
+  text-transform: capitalize;
+}
+#unit-celsius {
+  text-decoration: none;
+}
+#unit-farenheit {
+  text-decoration: none;
+}
