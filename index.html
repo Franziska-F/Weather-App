@@ -27,130 +27,81 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="card" style="width: 50rem">
-        <div class="card-header bg-transparent">
-          <h3><i class="fas fa-frog frog-icon" id="frog"></i> Weather App</h3>
-        </div>
-
-        <div class="card-body">
-          <form id="searchForm">
-            <div class="row">
-              <div class="col-12">
-                <label for="text" class="form-label"></label>
-              </div>
-              <div class="col">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    placeholder="e.g. Vienna"
-                    class="form-control"
-                    autofocus
-                    id="search-input"
-                  />
-                  <div class="form-text">City, region, village...</div>
-                </div>
-              </div>
-
-              <div class="col">
-                <button type="submit" class="btn btn-primary">Search</button>
-                <button
-                  type="click"
-                  class="btn btn-warning"
-                  id="location-button"
-                >
-                  Current Location
-                </button>
-              </div>
-            </div>
-          </form>
-          <br />
-          <br />
-          <div class="row">
-            <div class="col">
-              <div class="card border-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted" id="city-input"></h5>
-                  <h6 class="card-subtitle mb-2 text-muted" id="main-date">
-                    Date
-                  </h6>
-                  <span class="mainTemerature" id="temp"></span>
-                  <span class="unit">
-                    <a href="#" id="unit-celsius"></a>
-                    <a href="#" id="unit-farenheit"></a>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted">Forecast</h5>
-                  <h6 class="card-subtitle mb-2 text-muted" id="more-info"></h6>
-                  <p class="weatherText" id="description"></p>
-                </div>
-              </div>
-            </div>
+    <div class="main">
+      <div class="container">
+        <div class="card" style="width: 700px">
+          <div class="card-header bg-transparent">
+            <h3><i class="fas fa-frog frog-icon" id="frog"></i> Weather App</h3>
           </div>
-          <br />
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-header">25th Nov</div>
-                <div class="card-body"></div>
-                <p class="forecast">🌧 8°C</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-header">26th Nov</div>
 
-                <div class="card-body"></div>
-                <p class="forecast">🌧 7°C</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-header">27th Nov</div>
+          <div class="card-body">
+            <form id="searchForm">
+              <div class="row">
+                <div class="col-12">
+                  <label for="text" class="form-label"></label>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="e.g. Vienna"
+                      class="form-control"
+                      autofocus
+                      id="search-input"
+                    />
+                    <div class="form-text">City, region, village...</div>
+                  </div>
+                </div>
 
-                <div class="card-body"></div>
-                <p class="forecast">☁️ 5°C</p>
+                <div class="col">
+                  <button type="submit" class="btn btn-primary w-50">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+            <br />
+            <br />
+            <div class="row">
+              <div class="col">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <h5 class="card-title text-muted" id="city-input"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted" id="main-date">
+                      Date
+                    </h6>
+                    <span class="mainTemerature" id="temp"></span>
+                    <span class="unit">
+                      <a href="#" id="unit-celsius"></a>
+                      <a href="#" id="unit-farenheit"></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <h5 class="card-title text-muted">Forecast</h5>
+                    <h6
+                      class="card-subtitle mb-2 text-muted"
+                      id="more-info"
+                    ></h6>
+                    <p class="weatherText" id="description"></p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-header">28th Nov</div>
-                <div class="card-body"></div>
-                <p class="forecast">🌥 3°C</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-header">29th Nov</div>
-
-                <div class="card-body"></div>
-                <p class="forecast">☀️ 2°C</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-header">30th Nov</div>
-
-                <div class="card-body"></div>
-                <p class="forecast">☀️ 2°C</p>
-              </div>
-            </div>
+            <br />
+          </div>
+          <div class="footer">
+            <a href="https://github.com/Franziska-F/Weather-App" target="_blank"
+              >Coded</a
+            >
+            by Franziska Fouchs
           </div>
         </div>
       </div>
     </div>
-    <span class="footer">
-      <a href="https://github.com/Franziska-F/Weather-App" target="_blank"
-        >Coded</a
-      >
-      by Franziska Fouchs</span
-    >
-
     <script src="src/index.js"></script>
   </body>
 </html>

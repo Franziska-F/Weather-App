@@ -5,6 +5,14 @@ h3 {
 .container {
   font-family: "Poppins", sans-serif;
 }
+.main {
+  display: block;
+  margin: 60px auto;
+}
+.card {
+  display: block;
+  margin: 0 auto;
+}
 .frog-icon {
   color: #0b5ed7;
 }
@@ -35,8 +43,9 @@ h3 {
   text-decoration: none;
 }
 .footer {
-  font-size: smaller;
   position: relative;
-  top: 3px;
-  left: 71px;
+  left: 5px;
+  bottom: 2px;
+  font-size: smaller;
+  color: #6e777f;
 }
