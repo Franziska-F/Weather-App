@@ -34,3 +34,9 @@ h3 {
 #unit-farenheit {
   text-decoration: none;
 }
+.footer {
+  font-size: smaller;
+  position: relative;
+  top: 3px;
+  left: 71px;
+}
