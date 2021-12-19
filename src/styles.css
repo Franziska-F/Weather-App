@@ -6,7 +6,7 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 .main {
-  display: block;
+  max-width: 600px;
   margin: 60px auto;
 }
 .card {
@@ -43,9 +43,9 @@ h3 {
   text-decoration: none;
 }
 .footer {
-  position: relative;
-  left: 5px;
-  bottom: 2px;
+  display: block;
+  margin: 0 auto;
+  padding-left: 12px;
   font-size: smaller;
   color: #6e777f;
 }
