@@ -52,13 +52,17 @@ function tellWeather(response) {
 
   displayTemperature.innerHTML = `${temperature}°C`;
   let displayMaxMinTemperature = document.querySelector("#more-info");
-  displayMaxMinTemperature.innerHTML = `min.: ${minTemperature}°C, max.: ${maxTemperature}°C`;
+  displayMaxMinTemperature.innerHTML = `Min.: ${minTemperature}°C, Max.: ${maxTemperature}°C`;
   let displayDescription = document.querySelector("#description");
   displayDescription.innerHTML = `${description}`;
   let location = response.data.name;
   console.log(location);
   let displayLocation = document.querySelector("#city-input");
   displayLocation.innerHTML = `${location}`;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed * 3, 6)} km/h`;
 }
 
 let showTemperature = document.querySelector("#searchForm");
