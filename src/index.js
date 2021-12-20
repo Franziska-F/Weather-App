@@ -49,7 +49,9 @@ function tellWeather(response) {
   let maxTemperature = Math.round(response.data.main.temp_max);
   let minTemperature = Math.round(response.data.main.temp_min);
   let description = response.data.weather[0].description;
-
+  let displayHumidity = document.querySelector("#humidity");
+  let displayWind = document.querySelector("#wind");
+  let iconElement = document.querySelector(".weather-icon");
   displayTemperature.innerHTML = `${temperature}°C`;
   let displayMaxMinTemperature = document.querySelector("#more-info");
   displayMaxMinTemperature.innerHTML = `Min.: ${minTemperature}°C, Max.: ${maxTemperature}°C`;
@@ -59,10 +61,18 @@ function tellWeather(response) {
   console.log(location);
   let displayLocation = document.querySelector("#city-input");
   displayLocation.innerHTML = `${location}`;
-  let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  let wind = document.querySelector("#wind");
-  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed * 3, 6)} km/h`;
+
+  displayHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  displayWind.innerHTML = `Wind: ${Math.round(
+    response.data.wind.speed * 3,
+    6
+  )} km/h`;
+
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let showTemperature = document.querySelector("#searchForm");
