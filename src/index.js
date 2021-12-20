@@ -75,24 +75,13 @@ function tellWeather(response) {
   );
 }
 
-let showTemperature = document.querySelector("#searchForm");
-showTemperature.addEventListener("submit", searchWeather);
-
-function locationWeather(position) {
-  console.log(position);
-
-  let longitude = position.coords.longitude;
-  let latitude = position.coords.latitude;
+function landing(city) {
   let apiKey = "8c4070f08d562986da25915538f23e1a";
 
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(tellWeather);
 }
-function currentLocation(event) {
-  console.log(event);
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(locationWeather);
-}
 
-let locationButton = document.querySelector("#location-button");
-locationButton.addEventListener("click", currentLocation);
+let showTemperature = document.querySelector("#searchForm");
+showTemperature.addEventListener("submit", searchWeather);
+landing("Vienna");
