@@ -2,7 +2,7 @@ h3 {
   font-size: 30px;
 }
 ul {
-  padding-left: 90px;
+  padding-left: 150px;
 }
 li {
   display: block;
@@ -48,6 +48,16 @@ li {
   width: 80px;
   height: 80px;
 }
+.card-body .active {
+  color: black;
+  cursor: default;
+
+}
+.card-body .active:hover {
+  color: black;
+  cursor: default;
+  
+}
 #description {
   text-transform: capitalize;
 }
@@ -60,7 +70,7 @@ li {
 .footer {
   display: block;
   margin: 0 auto;
-  padding-left: 12px;
+  padding-left: 12px;‚
   font-size: smaller;
   color: #6e777f;
 }

@@ -52,7 +52,8 @@ function tellWeather(response) {
   let displayHumidity = document.querySelector("#humidity");
   let displayWind = document.querySelector("#wind");
   let iconElement = document.querySelector(".weather-icon");
-  displayTemperature.innerHTML = `${temperature}°C`;
+  celsius = response.data.main.temp;
+  displayTemperature.innerHTML = `${temperature}`;
   let displayMaxMinTemperature = document.querySelector("#more-info");
   displayMaxMinTemperature.innerHTML = `Min.: ${minTemperature}°C, Max.: ${maxTemperature}°C`;
   let displayDescription = document.querySelector("#description");
@@ -85,3 +86,27 @@ function landing(city) {
 let showTemperature = document.querySelector("#searchForm");
 showTemperature.addEventListener("submit", searchWeather);
 landing("Vienna");
+
+function displayFarenheit(event) {
+  event.preventDefault();
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  celsiusUnit.classList.remove("active");
+  farenheitUnit.classList.add("active");
+  let displayTemperature = document.querySelector("#temp");
+  displayTemperature.innerHTML = Math.round(fahrenheit);
+}
+let celsius = null;
+
+let farenheitUnit = document.querySelector("#unit-farenheit");
+farenheitUnit.addEventListener("click", displayFarenheit);
+
+function displayCelsius(event) {
+  event.preventDefault();
+
+  celsiusUnit.classList.add("active");
+  farenheitUnit.classList.remove("active");
+  let displayTemperature = document.querySelector("#temp");
+  displayTemperature.innerHTML = Math.round(celsius);
+}
+let celsiusUnit = document.querySelector("#unit-celsius");
+celsiusUnit.addEventListener("click", displayCelsius);
