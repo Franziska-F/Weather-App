@@ -1,22 +1,12 @@
 function currentDate(now) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
   let currentDay = days[now.getDay()];
 
-  let hour = now.getHours();
+  let currentYear = now.getFullYear();
+  let currentMonth = now.getMonth() + 1;
+  let currentDate = now.getDate();
 
-  let minute = now.getMinutes();
-  if (minute < 10) {
-    minute = `0${minute}`;
-  }
-  let time = `${currentDay}, ${hour}:${minute}`;
+  let time = `${currentDay}, ${currentDate}.${currentMonth}.${currentYear}`;
   return time;
 }
 
