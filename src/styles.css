@@ -39,7 +39,7 @@ li {
   top: -15px;
 }
 
-.forecast {
+.dailyForecast {
   text-align: center;
   font-size: 30px;
 }
@@ -51,12 +51,10 @@ li {
 .card-body .active {
   color: black;
   cursor: default;
-
 }
 .card-body .active:hover {
   color: black;
   cursor: default;
-  
 }
 #description {
   text-transform: capitalize;
@@ -67,10 +65,27 @@ li {
 #unit-farenheit {
   text-decoration: none;
 }
+
+.displayForecast {
+  text-align: center;
+  color: #6c757d;
+}
+.displayForecast:hover {
+  background-color: rgba(17, 109, 246, 0.2);
+
+  border-radius: 5px;
+}
+
+#forecast-max {
+  color: black;
+}
+.forecastIcon {
+  width: 70px;
+}
 .footer {
   display: block;
   margin: 0 auto;
-  padding-left: 12px;‚
+  padding-left: 12px;
   font-size: smaller;
   color: #6e777f;
 }
