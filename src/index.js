@@ -24,6 +24,36 @@ function showCity(event) {
 let displayCity = document.querySelector("#searchForm");
 displayCity.addEventListener("submit", showCity);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast-row");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wen", "Tue", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+                <div class="col">
+                  <div class="displayForecast">
+                    <div class="forecastDay">${day}</div>
+                    <span>
+                      <img src= "http://openweathermap.org/img/wn/10d@2x.png"
+                      class="forecastIcon"</span
+                    >
+                    <div class="forecastTemp">
+                      <span id="forecast-max">5° |</span>
+
+                      <span id="forecast-min">1°</span>
+                    </div>
+                  </div>
+                </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 function searchWeather() {
   let apiKey = "8c4070f08d562986da25915538f23e1a";
   let search = document.querySelector("#search-input");
