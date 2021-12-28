@@ -56,11 +56,11 @@ function displayForecast(response) {
                     <div class="forecastTemp">
                       <span id="forecast-max">${Math.round(
                         forecastDay.temp.max
-                      )} |</span>
+                      )}°|</span>
 
                       <span id="forecast-min">${Math.round(
                         forecastDay.temp.min
-                      )}</span>
+                      )}°</span>
                     </div>
                   </div>
                 </div>`;
@@ -83,10 +83,10 @@ function searchWeather() {
 function getForecast(response) {
   let apiKey = "8c4070f08d562986da25915538f23e1a";
   let lon = response.data.coord.lon;
-  console.log(lon);
+
   let lat = response.data.coord.lat;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 function tellWeather(response) {
@@ -106,7 +106,7 @@ function tellWeather(response) {
   let displayDescription = document.querySelector("#description");
   displayDescription.innerHTML = `${description}`;
   let location = response.data.name;
-  console.log(location);
+
   let displayLocation = document.querySelector("#city-input");
   displayLocation.innerHTML = `${location}`;
 
