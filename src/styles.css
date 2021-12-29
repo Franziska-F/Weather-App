@@ -26,6 +26,9 @@ li {
 .frog-icon {
   color: #116df6;
 }
+#searchForm {
+  margin-top: 25px;
+}
 .mainTemerature {
   font-size: 32px;
   font-weight: bold;

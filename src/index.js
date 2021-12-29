@@ -90,7 +90,6 @@ function getForecast(response) {
   axios.get(apiUrl).then(displayForecast);
 }
 function tellWeather(response) {
-  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let displayTemperature = document.querySelector("#temp");
   let maxTemperature = Math.round(response.data.main.temp_max);
