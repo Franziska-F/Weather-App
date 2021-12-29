@@ -59,12 +59,6 @@ li {
 #description {
   text-transform: capitalize;
 }
-#unit-celsius {
-  text-decoration: none;
-}
-#unit-farenheit {
-  text-decoration: none;
-}
 
 .displayForecast {
   text-align: center;

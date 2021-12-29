@@ -134,27 +134,3 @@ function landing(city) {
 let showTemperature = document.querySelector("#searchForm");
 showTemperature.addEventListener("submit", searchWeather);
 landing("Vienna");
-
-function displayFarenheit(event) {
-  event.preventDefault();
-  let fahrenheit = (celsius * 9) / 5 + 32;
-  celsiusUnit.classList.remove("active");
-  farenheitUnit.classList.add("active");
-  let displayTemperature = document.querySelector("#temp");
-  displayTemperature.innerHTML = Math.round(fahrenheit);
-}
-let celsius = null;
-
-let farenheitUnit = document.querySelector("#unit-farenheit");
-farenheitUnit.addEventListener("click", displayFarenheit);
-
-function displayCelsius(event) {
-  event.preventDefault();
-
-  celsiusUnit.classList.add("active");
-  farenheitUnit.classList.remove("active");
-  let displayTemperature = document.querySelector("#temp");
-  displayTemperature.innerHTML = Math.round(celsius);
-}
-let celsiusUnit = document.querySelector("#unit-celsius");
-celsiusUnit.addEventListener("click", displayCelsius);
