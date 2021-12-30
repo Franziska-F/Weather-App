@@ -16,7 +16,7 @@ li {
   font-family: "Poppins", sans-serif;
 }
 .main {
-  max-width: 600px;
+  max-width: 700px;
   margin: 60px auto;
 }
 .card {
@@ -82,7 +82,7 @@ li {
 .footer {
   display: block;
   margin: 0 auto;
-  padding-left: 12px;
+
   font-size: smaller;
   color: #6e777f;
 }
