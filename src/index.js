@@ -48,7 +48,7 @@ function displayForecast(response) {
                     )}</div>
                   
                     <span>
-                      <img src= "http://openweathermap.org/img/wn/${
+                      <img src= "https://openweathermap.org/img/wn/${
                         forecastDay.weather[0].icon
                       }@2x.png"
                       class="forecastIcon"</span
